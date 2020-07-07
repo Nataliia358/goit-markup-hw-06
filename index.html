@@ -55,14 +55,48 @@
 <section class="hero">
     <div class="hero-container">
     <h1 class="hero-title">ЭФФЕКТИВНОЕ РЕШЕНИЕ <br/> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-        <a href="" class="button-hero data-open-modal">Заказать услугу</a>
+        <button class="button-hero" data-modal-open>Заказать услугу</button>
     </div>
 
-    <div class="backdrop is-hidden">
-        <div class="modal">
-        <button>Отпарвить</button>
-        </div>
+    <!--Модальное окно-->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="close-modal" data-modal-close>
+            <svg class="icon-close"></svg>
+        </button>
+        <form>
+            <b>Оставьте свои данные, мы вам перезвоним</b>
+            <label class="form-label">
+                <input type="text" name="name" placeholder="" class="form-field">
+                <span class="label-name">Имя</span>
+                <svg class="input-icon"></svg>
+            </label>
+            <label class="form-label">
+                <input type="tel" name="telephone" placeholder="" class="form-field">
+                <span class="label-name">Телефон</span>
+                <svg class="input-icon"></svg>
+            </label>
+            <label class="form-label">
+                <input type="email" name="mail" placeholder="" class="form-field">
+                <span class="label-name">Почта</span>
+                <svg class="input-icon"></svg>
+            </label>
+            <div class="comment-label">
+                <textarea class="comment-field" name="comment" rows="6"></textarea>
+                <span class="comment-name">Комментарий</span>
+            </div>
+            <label class="checkbox-label">
+                <input class="checkbox invisible" type="checkbox" name="agreement">
+                <span class="checkbox-icon"></span>
+                <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю
+                    <a href="">Условия договра</a>
+                </span>
+            </label>
+            <button type="submit" class="modal-send">Отправить</button>
+
+        </form>
     </div>
+</div>
 </section>
 
 <!--Приемущества-->
@@ -422,6 +456,8 @@
     <p>2020 | Developed by GoIT Students</p>
 </div>
 </footer>
+
+<script src="./js/modal.js"></script>
 
 </body>
 </html> 
